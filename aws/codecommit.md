@@ -17,6 +17,11 @@ Default region name [None]: us-east-1
 Default output format [None]: 
 ```
 
+以下にIAMのアクセスキー認証による方式を記述する。
+git 利用時に認証ヘルパーとしてAWSツールを使い、aws config に設定された情報を利用する。
+
+ほかの方法として、””AWS CodeCommit の HTTPS Git 認証”を利用する方法がある。こちらのほうが簡単かもしれない。
+
 ```
 $git config --global credential.helper '!aws --profile CodeCommitProfile codecommit credential-helper $@'
 $git config --global credential.UseHttpPath true
@@ -32,11 +37,6 @@ git clone https://git-codecommit.us-east-1.amazonaws.com/v1/repos/sangyonci
 
  ```
 
-
-miyamoto-masanao
-
-AKIAJDMVEVSFLM4JHUIA
-EbOODZ6kljQLRBXoWi1u7vb0Qr+U4u798X8ABa2k
 
 # windows
 
@@ -57,14 +57,13 @@ https://aws.amazon.com/jp/tools/
 
 ```
 aws configure
-AWS Access Key ID [None]: AKIAJDMVEVSFLM4JHUIA
-AWS Secret Access Key [None]: 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
+AWS Access Key ID [None]: 
+AWS Secret Access Key [None]: 
 Default region name [None]: us-east-1
 Default output format [None]:
 
 ```
 
-c:\Program Files (x86)\AWS Tools\CodeCommit
 
 ## 参考にしたURL
 
